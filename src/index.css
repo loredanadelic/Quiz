@@ -1,0 +1,56 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.game {
+  display: flex;
+  padding: 70px 0;
+  text-align: center;
+  margin: auto;
+  width: 50rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.restartBtn {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+}
+.restartBtn button {
+  margin: auto;
+  margin-top: 2rem;
+  width: 70%;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: large;
+}
+button:hover {
+  background-color: rgb(89, 207, 213);
+}
+button {
+  border-color: rgb(238, 237, 237);
+  background-color: rgb(238, 237, 237);
+  font-weight: 300;
+}
+button:disabled {
+  color: rgb(66, 66, 66);
+}
+button:disabled:hover {
+  background-color: rgb(238, 237, 237);
+}
