@@ -16,15 +16,16 @@ function App() {
   });
   const [selectedNumber, setSelectedNumber] = useState(3);
 
-  axios
-    .get("https://opentdb.com/api_category.php")
-    .then((res) => setCategories(res.data["trivia_categories"]));
-
-  const handleClick = () => {
+  useEffect(() => {
+    axios
+      .get("https://opentdb.com/api_category.php")
+      .then((res) => setCategories(res.data["trivia_categories"]));
+  }, []);
+  const handleClick = async () => {
     if (selectedNumber < 3 || selectedNumber > 12) {
       return alert("You need to choose number between 3 and 12!");
     }
-    axios
+    await axios
       .get(url + `amount=${selectedNumber}&category=${selectedCategory.id}`)
       .then((res) => {
         setQuestions(res.data.results);
